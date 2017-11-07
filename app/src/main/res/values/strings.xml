@@ -5,4 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="switch_fragment">Switch Fragment</string>
     <string name="color_fragment">Color Fragment</string>
+    <string name="toggle_color">Toggle Color</string>
 </resources>

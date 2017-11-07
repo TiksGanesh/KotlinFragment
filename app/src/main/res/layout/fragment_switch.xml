@@ -9,8 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:text="@string/switch_fragment"
         android:textColor="@color/colorWhite"
-        android:textSize="20sp"
-        android:text="@string/switch_fragment" />
+        android:textSize="20sp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonToggleColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toggle_color"
+        android:textAllCaps="false" />
 
 </FrameLayout>

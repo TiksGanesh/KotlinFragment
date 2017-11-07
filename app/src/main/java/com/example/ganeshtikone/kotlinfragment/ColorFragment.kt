@@ -2,6 +2,7 @@ package com.example.ganeshtikone.kotlinfragment
 
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -16,6 +17,7 @@ import android.view.ViewGroup
 class ColorFragment : Fragment() {
 
     val LOGTAG = ColorFragment::class.simpleName
+    private lateinit var backgroundView: View
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
@@ -30,9 +32,13 @@ class ColorFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         Log.d(LOGTAG, "onCreateView executed")
-        return inflater!!.inflate(R.layout.fragment_color, container, false)
+
+        // Inflate the layout for this fragment
+        val rootView = inflater!!.inflate(R.layout.fragment_color, container, false)
+        backgroundView = rootView.findViewById(R.id.colorFragmentView)
+
+        return rootView
     }
 
 
@@ -76,5 +82,14 @@ class ColorFragment : Fragment() {
         Log.d(LOGTAG, "onDetach executed")
         super.onDetach()
     }
+
+    /**
+     * Public function to change background color of
+     * ColorFragment
+     */
+    fun changeBackgroundColor(backgroundColor:Int){
+        backgroundView.setBackgroundColor(backgroundColor)
+    }
+
 
 }// Required empty public constructor
